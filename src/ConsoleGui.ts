@@ -398,28 +398,28 @@ class ConsoleManager extends EventEmitter {
                 this.emit("exit")
             } else {
                 if (Object.keys(this.popupCollection).length === 0) {
-                    if (key.name === "down") {
-                        this.layout.pages[this.layout.getSelected()].decreaseScrollIndex()
-                        this.refresh()
-                        return
-                    } else if (key.name === "up") {
-                        this.layout.pages[this.layout.getSelected()].increaseScrollIndex()
-                        this.refresh()
-                        return
-                    }
-                    if (this.layoutOptions.type !== "single") {
-                        if (key.name === "left") {
-                            this.emit("layoutratiochanged", key)
-                            this.layout.decreaseRatio(0.01)
-                            this.refresh()
-                            return
-                        } else if (key.name === "right") {
-                            this.emit("layoutratiochanged", key)
-                            this.layout.increaseRatio(0.01)
-                            this.refresh()
-                            return
-                        }
-                    }
+                    // if (key.name === "down") {
+                    //     this.layout.pages[this.layout.getSelected()].decreaseScrollIndex()
+                    //     this.refresh()
+                    //     return
+                    // } else if (key.name === "up") {
+                    //     this.layout.pages[this.layout.getSelected()].increaseScrollIndex()
+                    //     this.refresh()
+                    //     return
+                    // }
+                    // if (this.layoutOptions.type !== "single") {
+                    //     if (key.name === "left") {
+                    //         this.emit("layoutratiochanged", key)
+                    //         this.layout.decreaseRatio(0.01)
+                    //         this.refresh()
+                    //         return
+                    //     } else if (key.name === "right") {
+                    //         this.emit("layoutratiochanged", key)
+                    //         this.layout.increaseRatio(0.01)
+                    //         this.refresh()
+                    //         return
+                    //     }
+                    // }
                     this.emit("keypressed", key)
                 }
             }
